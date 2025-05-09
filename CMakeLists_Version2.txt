@@ -1,0 +1,37 @@
+cmake_minimum_required(VERSION 3.5)
+project(my_ros2_package)
+
+# Default to C++14
+if(NOT CMAKE_CXX_STANDARD)
+  set(CMAKE_CXX_STANDARD 14)
+endif()
+
+# Find dependencies
+find_package(ament_cmake REQUIRED)
+find_package(rclpy REQUIRED)
+find_package(sensor_msgs REQUIRED)
+find_package(nav_msgs REQUIRED)
+find_package(turtlebot3_msgs REQUIRED)
+find_package(turtlebot3_navigation2 REQUIRED)
+find_package(slam_toolbox REQUIRED)
+find_package(rviz2 REQUIRED)
+
+# Install Python scripts
+install(
+  DIRECTORY src/
+  DESTINATION lib/${PROJECT_NAME}
+)
+
+# Install launch files
+install(
+  DIRECTORY launch/
+  DESTINATION share/${PROJECT_NAME}/launch
+)
+
+# Install RViz config files
+install(
+  DIRECTORY rviz/
+  DESTINATION share/${PROJECT_NAME}/rviz
+)
+
+ament_package()
