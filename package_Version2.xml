@@ -3,7 +3,7 @@
   <name>my_ros2_package</name>
   <version>0.0.1</version>
   <description>Custom ROS2 package for TurtleBot3 frontier exploration and SLAM visualization.</description>
-  <maintainer email="your_email@example.com">Your Name</maintainer>
+  <maintainer email="f.m.nowacki@student.tue.nl">Your Name</maintainer>
   <license>Apache License 2.0</license>
 
   <!-- Dependencies -->
