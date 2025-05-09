@@ -1,0 +1,14 @@
+# RViz configuration for SLAM visualization
+Visualization Manager:
+  Global Options:
+    Frame: map
+    Fixed Frame: map
+Displays:
+  - Name: Map
+    Type: nav_msgs/OccupancyGrid
+    Topic: /map
+  - Name: LaserScan
+    Type: sensor_msgs/LaserScan
+    Topic: /scan
+  - Name: Robot Model
+    Type: rviz/RobotModel
